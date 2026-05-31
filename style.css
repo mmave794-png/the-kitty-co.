@@ -130,3 +130,41 @@ footer {
     transform: translateY(0);
   }
 }
+/* PAW BACKGROUND CONTAINER */
+.paw-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* SINGLE PAW */
+.paw {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.15;
+  color: #c8b6ff;
+  animation: floatPaw linear infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes floatPaw {
+  from {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(-20vh) rotate(360deg);
+    opacity: 0;
+  }
+}body > *:not(.paw-background) {
+  position: relative;
+  z-index: 1;
+}
