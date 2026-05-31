@@ -383,3 +383,57 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 </body>
 </html>
+<form class="checkout-form" onsubmit="completeOrder(event)">
+  <input type="text" placeholder="Full Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Shipping Address" required>
+
+  <button class="buy-btn" type="submit">
+    Place Order 🐱
+  </button>
+</form>
+
+<script>
+function completeOrder(e) {
+  e.preventDefault();
+  window.location.href = "confirmation.html";
+}
+</script><script>
+function completeOrder(e) {
+  e.preventDefault();
+
+  // Create unique order number
+  const orderNumber = "KC-" + Date.now();
+
+  // Save order number
+  localStorage.setItem("orderNumber", orderNumber);
+
+  // Go to confirmation page
+  window.location.href = "confirmation.html";
+}
+</script>KC-1717171717171<p class="order-number">
+  Order Number: <strong id="order-id"></strong>
+</p><script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const summary = document.getElementById("order-summary");
+  const orderId = localStorage.getItem("orderNumber");
+
+  document.getElementById("order-id").innerText = orderId;
+
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price;
+    summary.innerHTML += `
+      <div class="cart-item">
+        <span>${item.name}</span>
+        <span>$${item.price}</span>
+      </div>
+    `;
+  });
+
+  summary.innerHTML += `<h3>Total: $${total}</h3>`;
+
+  // Clear cart AFTER showing summary
+  localStorage.removeItem("cart");
+  localStorage.removeItem("orderNumber");
+</script>
