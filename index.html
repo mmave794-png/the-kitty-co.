@@ -437,3 +437,23 @@ function completeOrder(e) {
   localStorage.removeItem("cart");
   localStorage.removeItem("orderNumber");
 </script>
+<button class="buy-btn" onclick="checkoutStripe()">
+  Pay Securely 💳
+</button>
+
+<script>
+async function checkoutStripe() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const response = await fetch("/api/create-checkout-session", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ items: cart })
+  });
+
+  const data = await response.json();
+  window.location.href = data.url;
+}
+</script>Card number: 4242 4242 4242 4242
+Expiry: Any future date
+CVC: Any 3 digits
