@@ -165,3 +165,24 @@ function renderCartDrawer() {
 
   document.getElementById("drawer-total").innerText = total.toFixed(2);
 }
+fetch("products.json")
+  .then(res => res.json())
+  .then(products => renderProducts(products));
+
+function renderProducts(products) {
+  const container = document.getElementById("products");
+  container.innerHTML = "";
+
+  products.forEach(product => {
+    container.innerHTML += `
+      <div class="product-card">
+        <img src="${product.image}">
+        <h3>${product.name}</h3>
+        <p>$${product.price}</p>
+        <button onclick="openProduct(${product.id})">
+          View Product
+        </button>
+      </div>
+    `;
+  });
+}
