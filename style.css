@@ -192,3 +192,33 @@ footer {
   margin: 15px 0;
   font-size: 1.1rem;
 }
+/* QUANTITY SELECTOR */
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 25px 0;
+}
+
+.qty-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.qty-btn:hover {
+  transform: scale(1.1);
+}
+
+#quantity {
+  font-size: 1.2rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
