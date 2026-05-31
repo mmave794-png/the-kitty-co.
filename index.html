@@ -10,8 +10,23 @@
   <!-- Cute Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<!-- CART OVERLAY -->
+<div id="cart-overlay" onclick="toggleCart()"></div>
 
-<body>
+<!-- CART DRAWER -->
+<div id="cart-drawer">
+  <div class="cart-header">
+    <h2>My Cart 🐾</h2>
+    <button onclick="toggleCart()">✕</button>
+  </div>
+
+  <div id="cart-items-drawer"></div>
+
+  <div class="cart-footer">
+    <p>Total: $<span id="drawer-total">0</span></p>
+    <a href="cart.html" class="checkout-btn">View Cart</a>
+  </div>
+</div><body>
 <!-- Paw Print Background -->
 <div class="paw-background"></div>  <!-- NAVBAR -->
   <nav class="navbar">
