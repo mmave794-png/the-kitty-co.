@@ -1,12 +1,28 @@
-function addToCartWithQty() {
-  cartCount += quantity;
-  document.getElementById("cart-count").innerText = cartCount;
 
-  console.log("Added to cart:", {
+function addToCartWithQty() {
+  const product = {
+    id: 1,
+    name: "Kitty Plush",
+    price: 25,
     size: selectedSize,
     color: selectedColor,
     quantity: quantity
-  });
+  };
+
+  const existing = cart.find(item =>
+    item.id === product.id &&
+    item.size === product.size &&
+    item.color === product.color
+  );
+
+  if (existing) {
+    existing.quantity += quantity;
+  } else {
+    cart.push(product);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartCount();
 
   quantity = 1;
   document.getElementById("quantity").innerText = quantity;
