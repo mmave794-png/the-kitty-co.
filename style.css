@@ -1,4 +1,9 @@
-/* RESET */
+function searchProducts(query) {
+  const filtered = allProducts.filter(p =>
+    p.name.toLowerCase().includes(query.toLowerCase())
+  );
+  renderProducts(filtered);
+}* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -490,4 +495,11 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 24px;
+}
+.search-bar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  margin: 20px 0;
 }
