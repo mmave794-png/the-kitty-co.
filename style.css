@@ -411,3 +411,25 @@ footer {
   padding: 16px;
   border-top: 1px solid #e5dfff;
 }
+:root {
+  --bg-light: #f6f0ff;
+  --accent: #c8b6ff;
+  --text-main: #35294b;
+  --card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-main);
+}
+
+header, .products, footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+}
