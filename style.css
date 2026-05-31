@@ -34,4 +34,48 @@ li {
 footer {
   margin-top: 4rem;
   font-size: 0.9rem;
+}.kitty-footer {
+  background: linear-gradient(135deg, #f2e6ff, #e6d4ff);
+  color: #6b4ea0;
+  text-align: center;
+  padding: 25px 15px;
+  font-family: "Poppins", "Quicksand", sans-serif;
+  font-size: 0.95rem;
+  border-top: 2px solid #dcc6ff;
+  box-shadow: 0 -4px 10px rgba(180, 140, 255, 0.15);
 }
+
+.kitty-footer p {
+  margin: 0;
+  letter-spacing: 0.5px;
+}.kitty-footer {
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.96; }.kitty-footer {
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 -4px 10px rgba(180, 140, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 -6px 18px rgba(200, 160, 255, 0.35);
+  }
+}}.social-icons a:hover {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-6px); }
+  60%  { transform: translateY(2px); }
+  100% { transform: translateY(0); }
+}.social-icons a:hover {
+  animation: bounce 0.6s ease;
+
+
+
