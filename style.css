@@ -560,3 +560,32 @@ fill: #9b6cff;.kitty-logo {
     transform: translateY(0);
   }
 }
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.7);
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.checkout-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-form input {
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+}
+
+.note {
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
