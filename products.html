@@ -60,10 +60,14 @@
       <p id="product-price"></p>
       <p id="product-description"></p>
 
-      <button class="add-btn">Add to Cart</button>
+      <button class<div class="quantity-wrapper">
+  <button class="qty-btn" onclick="changeQty(-1)">−</button>
+  <span id="quantity">1</span>
+  <button class="qty-btn" onclick="changeQty(1)">+</button>
+</div>
+
+<button class="add-btn" onclick="addToCartWithQty()">Add to Cart</button>/button>
     </div>
   </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+  
