@@ -26,3 +26,11 @@ export default async function handler(req, res) {
 
   res.json({ url: session.url });
 }
+line_items: items.map(item => ({
+  price_data: {
+    currency: "usd",
+    product_data: { name: item.name },
+    unit_amount: item.price * 100,
+  },
+  quantity: item.quantity,
+}))
