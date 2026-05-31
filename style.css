@@ -378,4 +378,10 @@ revealOnScroll();.reveal {
 @keyframes pawsFloat {
   0% { transform: translateY(0); }
   100% { transform: translateY(-120vh); }
-}
+}<section class="products">
+  <div class="product-card">
+    <img src="product1.jpg" alt="Product">
+    <h3>Pastel Cozy Sweater</h3>
+    <p>$42</p>
+  </div>
+</section>
