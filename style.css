@@ -30,8 +30,44 @@ ul {
 li {
   margin: 0.5rem 0;
 }
+/* Full-screen loader */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #f2e6ff, #e6d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
 
-footer {
+/* Hide loader */
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Loader content */
+.loader-content {
+  text-align: center;
+  color: #6b4ea0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo animation */
+.loader-logo {
+  width: 120px;
+  margin-bottom: 14px;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+/* Cute pulse */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}footer {
   margin-top: 4rem;
   font-size: 0.9rem;
 }.kitty-footer {
