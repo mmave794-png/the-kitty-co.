@@ -106,8 +106,53 @@ body {
 .product-card:hover {
   transform: translateY(-10px);
 }
+/* VARIANTS */
+.variant-section {
+  margin: 20px 0;
+}
 
-.image {
+.variant-section h4 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* SIZE BUTTONS */
+.size-options {
+  display: flex;
+  gap: 10px;
+}
+
+.size-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.size-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* COLOR SWATCHES */
+.color-options {
+  display: flex;
+  gap: 12px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.color-swatch.active {
+  border-color: var(--primary);
+}.image {
   height: 180px;
   background: linear-gradient(135deg, #e9dcff, #d6c4ff);
   border-radius: 16px;
