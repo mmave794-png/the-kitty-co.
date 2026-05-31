@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Kitty Hoodie",
+    "price": 39.99,
+    "image": "images/hoodie.jpg",
+    "sizes": ["S", "M", "L"],
+    "colors": ["Lavender", "Pink"],
+    "description": "Cozy pastel hoodie with kitty vibes 🐾"
+  },
+  {
+    "id": 2,
+    "name": "Pastel Kitty Pillow",
+    "price": 24.99,
+    "image": "images/pillow.jpg",
+    "sizes": ["One Size"],
+    "colors": ["Purple", "Cream"],
+    "description": "Soft decorative pillow for cat lovers 💜"
+  }
+]
