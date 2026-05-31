@@ -467,3 +467,10 @@ CVC: Any 3 digits<div class="quantity-control">
 
 <script src="js/inventory.js"></script>
 <script src="js/cart.js"></script>
+<script>
+cart.forEach(item => {
+  if (inventory[item.name]) {
+    inventory[item.name].stock -= item.quantity;
+  }
+});
+</script>
