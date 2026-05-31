@@ -333,4 +333,53 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </p>
 
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmed – The Kitty Company</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+<section class="confirmation fade-in">
+  <div class="checkmark">✓</div>
+
+  <h1>Order Confirmed!</h1>
+  <p class="thank-you">
+    Thank you for shopping with <strong>The Kitty Company</strong> 💜
+  </p>
+
+  <p class="order-note">
+    Your cozy goodies are being prepared with love 🐱✨  
+    A confirmation email will be sent shortly.
+  </p>
+
+  <div class="order-summary" id="order-summary"></div>
+
+  <a href="products.html">
+    <button class="buy-btn">Continue Shopping 🐾</button>
+  </a>
+</section>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const summary = document.getElementById("order-summary");
+
+  let total = 0;
+  cart.forEach(item => {
+    total += item.price;
+    summary.innerHTML += `
+      <div class="cart-item">
+        <span>${item.name}</span>
+        <span>$${item.price}</span>
+      </div>
+    `;
+  });
+
+  summary.innerHTML += `<h3>Total: $${total}</h3>`;
+  localStorage.removeItem("cart");
+</script>
+
+</body>
 </html>
