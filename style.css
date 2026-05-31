@@ -364,3 +364,18 @@ revealOnScroll();.reveal {
   from { background-position: 0 0; }
   to { background-position: 400px 400px; }
 }
+.paw-container {
+  position: fixed;
+  bottom: -50px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  opacity: 0.15;
+  animation: pawsFloat 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes pawsFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-120vh); }
+}
