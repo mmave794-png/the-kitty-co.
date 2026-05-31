@@ -68,3 +68,21 @@ function changeQty(amount) {
   quantity = 1;
   document.getElementById("quantity").innerText = quantity;
 }
+let selectedSize = "S";
+let selectedColor = "Pink";
+
+function selectSize(button, size) {
+  document.querySelectorAll(".size-btn").forEach(btn =>
+    btn.classList.remove("active")
+  );
+  button.classList.add("active");
+  selectedSize = size;
+}
+
+function selectColor(element, color) {
+  document.querySelectorAll(".color-swatch").forEach(swatch =>
+    swatch.classList.remove("active")
+  );
+  element.classList.add("active");
+  selectedColor = color;
+}
