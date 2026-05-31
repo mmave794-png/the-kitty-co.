@@ -86,3 +86,49 @@ function selectColor(element, color) {
   element.classList.add("active");
   selectedColor = color;
 }
+function renderCart() {
+  const container = document.getElementById("cart-items");
+  if (!container) return;
+
+  container.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity;
+
+    container.innerHTML += `
+      <div class="cart-item">
+        <div class="cart-info">
+          <strong>${item.name}</strong>
+          <p>Size: ${item.size}</p>
+          <p>Color: ${item.color}</p>
+          <p>$${item.price}</p>
+        </div>
+
+        <div class="cart-actions">
+          <button onclick="changeQty(${index}, -1)">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQty(${index}, 1)">+</button>
+          <button class="remove" onclick="removeItem(${index})">✕</button>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("cart-total").innerText = total.toFixed(2);
+}renderCart();function changeQty(index, change) {
+  cart[index].quantity += change;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartCount();
+}function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartCount();
+}
