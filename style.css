@@ -453,4 +453,12 @@ revealOnScroll();.reveal {
   to {
     opacity: 1;
   }
+}stroke: #b892ff;
+fill: #9b6cff;.kitty-logo {
+  animation: logoBounce 1s ease infinite alternate;
+}
+
+@keyframes logoBounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-4px); }
 }
