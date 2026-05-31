@@ -78,4 +78,22 @@ footer {
   animation: bounce 0.6s ease;
 
 
+<footer class="kitty-footer">
+  <div class="paw-trail">
+    <span>🐾</span>
+    <span>🐾</span>
+    <span>🐾</span>
+    <span>🐾</span>
+  </div>
 
+  <p>© 2026 The Kitty Company · Made with love, paws, and cozy vibes 🐾💜</p>
+
+  <div class="social-icons">
+    <a href="#">🐱</a>
+    <a href="#">🎀</a>
+    <a href="#">🌸</a>
+    <a href="#">💌</a>
+  </div>.kitty-footer {
+  position: relative;
+  overflow: hidden;
+}</footer>
