@@ -132,3 +132,8 @@ function renderCart() {
   renderCart();
   updateCartCount();
 }
+function toggleCart() {
+  document.getElementById("cart-drawer").classList.toggle("active");
+  document.getElementById("cart-overlay").classList.toggle("active");
+  renderCartDrawer();
+}
