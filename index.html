@@ -288,3 +288,49 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="displayCart()">
+
+<h1>Your Cart 🐾</h1>
+
+<div id="cart-items"></div>
+
+<h2>Total: <span id="total">$0</span></h2>
+
+<a href="checkout.html">
+  <button class="buy-btn">Proceed to Checkout 💜</button>
+</a>
+
+<script src="js/cart.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Checkout ✨</h1>
+
+<form class="checkout-form">
+  <input type="text" placeholder="Full Name" required>
+  <input type="email" placeholder="Email" required>
+  <input type="text" placeholder="Shipping Address" required>
+
+  <button class="buy-btn" type="submit">
+    Place Order 🐱
+  </button>
+</form>
+
+<p class="note">
+  💜 This is a demo checkout. Payments coming soon!
+</p>
+
+</body>
+</html>
