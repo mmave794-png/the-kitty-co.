@@ -120,3 +120,45 @@
 
   <main id="products" class="product-grid"></main>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Kitty Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP NAV (AMAZON STYLE) -->
+<header class="top-bar">
+  <div class="logo">🐾 The Kitty Company</div>
+
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search for kitty products..."
+    oninput="searchProducts()"
+    class="search-bar"
+  />
+
+  <div class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+</header>
+
+<!-- MAIN SHOP SECTION -->
+<main class="shop">
+  <div id="products" class="product-grid"></div>
+</main>
+
+<!-- CART DRAWER (OPTIONAL, KEEP IF YOU WANT) -->
+<div id="cart-overlay" onclick="toggleCart()"></div>
+<div id="cart-drawer">
+  <h2>My Cart 🐾</h2>
+  <div id="cart-items-drawer"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
