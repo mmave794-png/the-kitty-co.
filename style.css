@@ -197,4 +197,156 @@ body.fade-out {
     animation: none;
     opacity: 1;
   }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #f5ecff;
+}
+
+/* Animated gradient */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    #f2e6ff,
+    #e6d4ff,
+    #fbeeff,
+    #ede2ff
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 14s ease infinite;
+  z-index: -2;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}.animated-bg span {
+  position: fixed;
+  display: block;
+  width: 140px;
+  height: 140px;
+  background: rgba(200, 160, 255, 0.25);
+  border-radius: 50%;
+  animation: float 18s infinite ease-in-out;
+  z-index: -1;
+}
+
+.animated-bg span:nth-child(1) {
+  top: 15%;
+  left: 10%;
+}
+
+.animated-bg span:nth-child(2) {
+  top: 60%;
+  left: 70%;
+  width: 200px;
+  height: 200px;
+  animation-duration: 26s;
+}
+
+.animated-bg span:nth-child(3) {
+  top: 80%;
+  left: 25%;
+  width: 90px;
+  height: 90px;
+}
+
+.animated-bg span:nth-child(4) {
+  top: 30%;
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  animation-duration: 22s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}.content {
+  padding: 80px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #6b4ea0;
+}
+
+.hero p {
+  color: #7d65b5;
+  margin-top: 10px;
+}
+
+.card {
+  max-width: 420px;
+  margin: 0 auto 40px;
+  padding: 30px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(180, 140, 255, 0.3);
+  text-align: center;
+}const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .card {
+    margin: 20px;
+  }
+}body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(
+    120deg,
+    #f3e8ff,
+    #e6d8ff,
+    #f9edff
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 12s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
