@@ -634,4 +634,20 @@ fill: #9b6cff;.kitty-logo {
   display: inline-block;
   color: #6a3fbf;
   font-weight: 500;
+}.quantity-control {
+  margin: 1rem 0;
+}
+
+.quantity-control label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.quantity-control input {
+  width: 80px;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
 }
