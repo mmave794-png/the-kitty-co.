@@ -1,484 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><link rel="stylesheet" href="style.css">    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Kitty Company</title>
-  </head><script>
-  const reveals = document.querySelectorAll(".reveal");
-
-  function revealOnScroll() {
-    const windowHeight = window.innerHeight;
-
-    reveals.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
-
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add("active");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", revealOnScroll);
-  revealOnScroll();
-</script><script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    setTimeout(() => {
-      loader.classList.add("hidden");
-    }, 800);
-  });
-</script><body><div style="color: white; font-size: 24px; padding: 40px;">
-  If you can see this text, HTML is working ✔️
-</div>    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body><div id="loader"><script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    setTimeout(() => {
-      loader.classList.add("hidden");
-    }, 800);
-  });<div class="sparkle-bg"></div></script>  <div class="loader-content">
-    <img src="images/logo.png" alt="The Kitty Company Logo" class="loader-logo">
-    <p>Loading cozy vibes… 🐾</p>
-  </div>
-</div></html><h1>The Kitty Company</h1>
-<p>Cozy styles for home & everyday life</p>
-<section>
-  <p>
-    Welcome to <strong>The Kitty Company</strong>, a small boutique where comfort,
-    style, and thoughtful design come together. We curate clothing you’ll love to
-    wear and home decor that makes your space feel warm, personal, and inspired.
-  </p>
-</section><section>
-  <h2>Our Collections</h2>
-  <ul>
-    <li><strong>Clothing</strong> – Soft, stylish pieces made for everyday comfort</li>
-    <li><strong>Home Decor</strong> – Cozy accents that turn houses into homes</li>
-    <li><strong>Seasonal Favorites</strong> – Limited finds inspired by the season</li>
-  </ul>
-</section><section>
-  <h2>About The Kitty Company</h2>
-  <p>
-    The Kitty Company was created with a love for simple beauty and intentional living.
-    Every item we offer is thoughtfully selected to bring joy, comfort, and a touch
-    of charm into your wardrobe and your home.
-  </p>
-</section><section>
-  <p>
-    Thank you for supporting our small business. We’re so happy you’re here.
-  </p><footer>
- <footer class="kitty-footer">
-  <div class="paw-trail">
-    <span>🐾</span>
-    <span>🐾</span>
-    <span>🐾</span>
-    <span>🐾</span>
-  </div>
-
-  <p>© 2026 The Kitty Company · Made with love, paws, and cozy vibes 🐾💜</p>
-
-  <div class="social-icons">
-    <a href="#">🐱</a>
-    <a href="#">🎀</a>
-    <a href="#">🌸</a>
-    <a href="#">💌</a>
-  </div>
-</footer>
-<script>
-  document.querySelectorAll("a").forEach(link => {
-    if (link.hostname === window.location.hostname) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const target = this.href;
-
-        document.body.classList.add("fade-out");
-
-        setTimeout(() => {
-          window.location.href = target;
-        }, 600);
-      });
-    }
-  });
-</script><a href="about.html">About Us</a>
-<a href="shop.html">Shop</a>
-<a href="contact.html">Contact</a>
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>The Kitty Company</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Cute Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- Animated background -->
-  <div class="animated-bg">
-    <span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- Main content -->
-  <main class="content">
-    <section class="hero reveal">
-      <h1>The Kitty Company 🐱</h1>
-      <p>Pastel clothing & cozy home decor made with love</p>
-    </section>
-
-    <section class="card reveal">
-      <h2>Our Collection</h2>
-      <p>Soft colors. Gentle textures. Cozy vibes.</p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>The Kitty Company</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Animated background -->
-  <div class="animated-bg">
-    <span></span><span></span><span></span><span></span>
-  </div>
-
-  <!-- Main content -->
-  <main class="content">
-    <section class="hero reveal">
-      <h1>The Kitty Company 🐱</h1>
-      <p>Pastel clothing & cozy home decor made with love</p>
-    </section>
-
-    <section class="card reveal">
-      <h2>Our Collection</h2>
-      <p>Soft colors. Gentle textures. Cozy vibes.</p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<div class="paw-container">
-  🐾 🐾 🐾 🐾 🐾
-</div>
-<section class="products">
-  <div class="product-card">
-    <img src="product1.jpg" alt="Product">
-    <h3>Pastel Cozy Sweater</h3>
-    <p>$42</p>
-  </div>
-</section><script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-</script><div class="product-card fade-in">...</div>
-<div id="loader">
-  <h1>The Kitty Company</h1>
-</div>
-#loader {
-  position: fixed;
-  inset: 0;
-  background: #f3e8ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  z-index: 9999;
-  animation: loaderFade 1s ease forwards;
-  animation-delay: 2s;
-}
-
-@keyframes loaderFade {
-  to { opacity: 0; visibility: hidden; }
-}<path
-  d="M60 100 L80 60 L100 100 M120 100 L140 60 L160 100"
-  class="logo-stroke"
-/><div id="loader">
-  <!-- SVG logo goes here -->
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>The Kitty Company – Products</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header class="site-header">
-  <h1>Our Favorites</h1>
-  <p>Curated cozy pieces, reviewed with love 🐾</p>
-</header>
-
-<section class="product-grid">
-
-  <a href="product-sweater.html" class="product-card fade-in">
-    <img src="images/sweater.jpg" alt="Pastel Sweater">
-    <h3>Pastel Cozy Sweater</h3>
-    <p class="price">$42</p>
-  </a>
-
-  <a href="product-pillow.html" class="product-card fade-in">
-    <img src="images/pillow.jpg" alt="Decor Pillow">
-    <h3>Lavender Cat Pillow</h3>
-    <p class="price">$28</p>
-  </a>
-
-  <a href="product-candle.html" class="product-card fade-in">
-    <img src="images/candle.jpg" alt="Candle">
-    <h3>Soft Vanilla Candle</h3>
-    <p class="price">$22</p>
-  </a>
-
-</section>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Pastel Cozy Sweater – Review</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<a class="back-link" href="products.html">← Back to Products</a>
-
-<section class="product-page fade-in">
-
-  <img src="images/sweater.jpg" alt="Sweater">
-
-  <div class="product-info">
-    <h1>Pastel Cozy Sweater</h1>
-    <p class="price">$42</p>
-
-    <div class="rating">
-      ⭐⭐⭐⭐⭐ <span>(4.9 / 5)</span>
-    </div>
-
-    <p class="description">
-      This sweater is incredibly soft, warm, and perfect for cozy days.
-      The pastel purple shade pairs beautifully with neutral outfits and
-      gives an effortlessly cute look.
-    </p>
-
-    <ul class="details">
-      <li>✔ Ultra-soft knit</li>
-      <li>✔ True to size</li>
-      <li>✔ Machine washable</li>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🐱 The Kitty Company</div>
+    <ul>
+      <li>Shop</li>
+      <li>About</li>
+      <li>Contact</li>
     </ul>
+  </nav>
 
-  <button class="buy-btn" onclick="addToCart('Pastel Cozy Sweater', 42)">
-  Add to Cart 🛒
-</button>
-  </div>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Soft. Cozy. Kitty-Approved.</h1>
+    <p>Pastel cuteness for your home & wardrobe</p>
+    <button class="cta">Shop Now</button>
+  </header>
 
-</section>
+  <!-- PRODUCTS -->
+  <section class="products">
+    <h2>Featured Products</h2>
 
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="image"></div>
+        <h3>Kitty Hoodie</h3>
+        <p>$39.99</p>
+      </div>
+
+      <div class="product-card">
+        <div class="image"></div>
+        <h3>Pastel Throw Pillow</h3>
+        <p>$24.99</p>
+      </div>
+
+      <div class="product-card">
+        <div class="image"></div>
+        <h3>Cute Cat Mug</h3>
+        <p>$18.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 The Kitty Company · Made with paws & love 🐾💜
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body onload="displayCart()">
-
-<h1>Your Cart 🐾</h1>
-
-<div id="cart-items"></div>
-
-<h2>Total: <span id="total">$0</span></h2>
-
-<a href="checkout.html">
-  <button class="buy-btn">Proceed to Checkout 💜</button>
-</a>
-
-<script src="js/cart.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-  <title>Checkout</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<h1>Checkout ✨</h1>
-
-<form class="checkout-form">
-  <input type="text" placeholder="Full Name" required>
-  <input type="email" placeholder="Email" required>
-  <input type="text" placeholder="Shipping Address" required>
-
-  <button class="buy-btn" type="submit">
-    Place Order 🐱
-  </button>
-</form>
-
-<p class="note">
-  💜 This is a demo checkout. Payments coming soon!
-</p>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Order Confirmed – The Kitty Company</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="page">
-
-<section class="confirmation fade-in">
-  <div class="checkmark">✓</div>
-
-  <h1>Order Confirmed!</h1>
-  <p class="thank-you">
-    Thank you for shopping with <strong>The Kitty Company</strong> 💜
-  </p>
-
-  <p class="order-note">
-    Your cozy goodies are being prepared with love 🐱✨  
-    A confirmation email will be sent shortly.
-  </p>
-
-  <div class="order-summary" id="order-summary"></div>
-
-  <a href="products.html">
-    <button class="buy-btn">Continue Shopping 🐾</button>
-  </a>
-</section>
-
-<script>
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const summary = document.getElementById("order-summary");
-
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price;
-    summary.innerHTML += `
-      <div class="cart-item">
-        <span>${item.name}</span>
-        <span>$${item.price}</span>
-      </div>
-    `;
-  });
-
-  summary.innerHTML += `<h3>Total: $${total}</h3>`;
-  localStorage.removeItem("cart");
-</script>
-
-</body>
-</html>
-<form class="checkout-form" onsubmit="completeOrder(event)">
-  <input type="text" placeholder="Full Name" required>
-  <input type="email" placeholder="Email" required>
-  <input type="text" placeholder="Shipping Address" required>
-
-  <button class="buy-btn" type="submit">
-    Place Order 🐱
-  </button>
-</form>
-
-<script>
-function completeOrder(e) {
-  e.preventDefault();
-  window.location.href = "confirmation.html";
-}
-</script><script>
-function completeOrder(e) {
-  e.preventDefault();
-
-  // Create unique order number
-  const orderNumber = "KC-" + Date.now();
-
-  // Save order number
-  localStorage.setItem("orderNumber", orderNumber);
-
-  // Go to confirmation page
-  window.location.href = "confirmation.html";
-}
-</script>KC-1717171717171<p class="order-number">
-  Order Number: <strong id="order-id"></strong>
-</p><script>
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const summary = document.getElementById("order-summary");
-  const orderId = localStorage.getItem("orderNumber");
-
-  document.getElementById("order-id").innerText = orderId;
-
-  let total = 0;
-  cart.forEach(item => {
-    total += item.price;
-    summary.innerHTML += `
-      <div class="cart-item">
-        <span>${item.name}</span>
-        <span>$${item.price}</span>
-      </div>
-    `;
-  });
-
-  summary.innerHTML += `<h3>Total: $${total}</h3>`;
-
-  // Clear cart AFTER showing summary
-  localStorage.removeItem("cart");
-  localStorage.removeItem("orderNumber");
-</script>
-<button class="buy-btn" onclick="checkoutStripe()">
-  Pay Securely 💳
-</button>
-
-<script>
-async function checkoutStripe() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  const response = await fetch("/api/create-checkout-session", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ items: cart })
-  });
-
-  const data = await response.json();
-  window.location.href = data.url;
-}
-</script>Card number: 4242 4242 4242 4242
-Expiry: Any future date
-CVC: Any 3 digits<div class="quantity-control">
-  <label>Quantity</label>
-  <input type="number" id="qty" value="1" min="1">
-</div>
-
-<button class="buy-btn" onclick="addToCartWithQty('Pastel Cozy Sweater')">
-  Add to Cart 🛒
-</button>
-
-<script src="js/inventory.js"></script>
-<script src="js/cart.js"></script>
-<script>
-cart.forEach(item => {
-  if (inventory[item.name]) {
-    inventory[item.name].stock -= item.quantity;
-  }
-});
-</script>
-<body>
-  <div class="background"></div>
-
-  <main class="content">
-    <h1>My Website</h1>
-    <p>Welcome to my site ✨</p>
-  </main>
-</body>
