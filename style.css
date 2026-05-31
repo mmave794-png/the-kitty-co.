@@ -651,3 +651,13 @@ fill: #9b6cff;.kitty-logo {
   border: none;
   font-size: 1rem;
 }
+body {
+  background: #cbb4f5; /* pastel purple */
+  color: #2a1b3d;      /* dark readable text */
+  font-family: system-ui, sans-serif;
+}.background {
+  position: fixed;
+  inset: 0;
+}.background {
+  z-index: -1;
+}
