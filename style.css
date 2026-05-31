@@ -625,4 +625,13 @@ fill: #9b6cff;.kitty-logo {
 .order-summary {
   margin: 2rem 0;
   text-align: left;
+}.order-number {
+  margin: 1rem 0 2rem;
+  font-size: 1rem;
+  background: #f1e9ff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  display: inline-block;
+  color: #6a3fbf;
+  font-weight: 500;
 }
