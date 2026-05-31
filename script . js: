@@ -1,0 +1,11 @@
+const cards = document.querySelectorAll(".product-card");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "fadeUp 0.8s ease forwards";
+    }
+  });
+});
+
+cards.forEach(card => observer.observe(card));
