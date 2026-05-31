@@ -456,4 +456,14 @@ async function checkoutStripe() {
 }
 </script>Card number: 4242 4242 4242 4242
 Expiry: Any future date
-CVC: Any 3 digits
+CVC: Any 3 digits<div class="quantity-control">
+  <label>Quantity</label>
+  <input type="number" id="qty" value="1" min="1">
+</div>
+
+<button class="buy-btn" onclick="addToCartWithQty('Pastel Cozy Sweater')">
+  Add to Cart 🛒
+</button>
+
+<script src="js/inventory.js"></script>
+<script src="js/cart.js"></script>
