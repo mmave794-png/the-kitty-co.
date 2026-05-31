@@ -418,3 +418,39 @@ revealOnScroll();.reveal {
 @keyframes loaderFade {
   to { opacity: 0; visibility: hidden; }
 }
+.kitty-logo {
+  overflow: visible;
+}
+
+/* Stroke animation (drawing line) */
+.logo-stroke {
+  stroke: #b892ff;
+  stroke-width: 6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawLine 2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Text fade-in */
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  fill: #9b6cff;
+  opacity: 0;
+  animation: textAppear 1.2s ease forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes textAppear {
+  to {
+    opacity: 1;
+  }
+}
