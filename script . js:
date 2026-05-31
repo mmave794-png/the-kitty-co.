@@ -54,3 +54,17 @@ if (productId && products[productId]) {
   document.getElementById("product-price").textContent = products[productId].price;
   document.getElementById("product-description").textContent = products[productId].description;
 }
+let quantity = 1;
+
+function changeQty(amount) {
+  quantity += amount;
+  if (quantity < 1) quantity = 1;
+  document.getElementById("quantity").innerText = quantity;
+}function addToCartWithQty() {
+  cartCount += quantity;
+  document.getElementById("cart-count").innerText = cartCount;
+
+  // Reset quantity
+  quantity = 1;
+  document.getElementById("quantity").innerText = quantity;
+}
