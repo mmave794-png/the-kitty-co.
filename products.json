@@ -18,3 +18,21 @@
     "description": "Soft decorative pillow for cat lovers 💜"
   }
 ]
+{
+  "id": 2,
+  "name": "NEW PRODUCT NAME",
+  "price": 0,
+  "image": "images/IMAGE-NAME.jpg",
+  "sizes": ["S", "M", "L"],
+  "colors": ["Purple"],
+  "description": "WRITE DESCRIPTION HERE"
+} ,
+{
+  "id": 2,
+  "name": "NEW PRODUCT NAME",
+  "price": 0,
+  "image": "images/IMAGE-NAME.jpg",
+  "sizes": ["S", "M", "L"],
+  "colors": ["Purple"],
+  "description": "WRITE DESCRIPTION HERE"
+}"image": "images/kitty-pillow.jpg"
