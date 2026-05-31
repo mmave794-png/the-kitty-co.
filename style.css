@@ -34,8 +34,10 @@ body {
   gap: 20px;
   list-style: none;
 }
-
-/* HERO */
+<div class="logo">
+  <span class="paw">🐾</span>
+  <span class="logo-text">The Kitty Company</span>
+</div>/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
