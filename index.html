@@ -174,4 +174,14 @@
     <h3>Pastel Cozy Sweater</h3>
     <p>$42</p>
   </div>
-</section>
+</section><script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script><div class="product-card fade-in">...</div>
