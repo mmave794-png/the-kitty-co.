@@ -589,3 +589,40 @@ fill: #9b6cff;.kitty-logo {
   margin-top: 1rem;
   opacity: 0.7;
 }
+.confirmation {
+  max-width: 600px;
+  margin: 6rem auto;
+  padding: 3rem;
+  background: rgba(255,255,255,0.8);
+  border-radius: 30px;
+  text-align: center;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(160,120,255,0.35);
+}
+
+.checkmark {
+  font-size: 4rem;
+  color: #9b6cff;
+  margin-bottom: 1rem;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.thank-you {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.order-note {
+  opacity: 0.75;
+  margin-bottom: 2rem;
+}
+
+.order-summary {
+  margin: 2rem 0;
+  text-align: left;
+}
