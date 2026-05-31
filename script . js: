@@ -28,3 +28,29 @@ function createPaw() {
 }
 
 setInterval(createPaw, 1200);
+const products = {
+  hoodie: {
+    name: "Kitty Hoodie",
+    price: "$39.99",
+    description: "A soft pastel hoodie with adorable kitty vibes. Cozy, cute, and comfy."
+  },
+  pillow: {
+    name: "Pastel Pillow",
+    price: "$24.99",
+    description: "A plush pastel pillow to make your space extra cozy and cute."
+  },
+  mug: {
+    name: "Cat Mug",
+    price: "$18.99",
+    description: "Sip your favorite drink from this adorable kitty mug."
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const productId = params.get("id");
+
+if (productId && products[productId]) {
+  document.getElementById("product-name").textContent = products[productId].name;
+  document.getElementById("product-price").textContent = products[productId].price;
+  document.getElementById("product-description").textContent = products[productId].description;
+}
