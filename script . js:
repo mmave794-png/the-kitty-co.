@@ -137,3 +137,31 @@ function toggleCart() {
   document.getElementById("cart-overlay").classList.toggle("active");
   renderCartDrawer();
 }
+function renderCartDrawer() {
+  const container = document.getElementById("cart-items-drawer");
+  if (!container) return;
+
+  container.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    total += item.price * item.quantity;
+
+    container.innerHTML += `
+      <div class="drawer-item">
+        <strong>${item.name}</strong>
+        <p>${item.size} • ${item.color}</p>
+        <p>$${item.price}</p>
+
+        <div class="drawer-actions">
+          <button onclick="changeQty(${index}, -1)">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQty(${index}, 1)">+</button>
+          <button onclick="removeItem(${index})">✕</button>
+        </div>
+      </div>
+    `;
+  });
+
+  document.getElementById("drawer-total").innerText = total.toFixed(2);
+}
