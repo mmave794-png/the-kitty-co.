@@ -1,0 +1,13 @@
+function addToCartWithQty() {
+  cartCount += quantity;
+  document.getElementById("cart-count").innerText = cartCount;
+
+  console.log("Added to cart:", {
+    size: selectedSize,
+    color: selectedColor,
+    quantity: quantity
+  });
+
+  quantity = 1;
+  document.getElementById("quantity").innerText = quantity;
+}
